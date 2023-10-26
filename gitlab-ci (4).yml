@@ -1,0 +1,40 @@
+variables:
+  MAVEN_OPTS: "-Djava.awt.headless=true -Dmaven.repo.local=./.m2/repository"  
+  CONTAINER_TEST_IMAGE: registry.gitlab.com/pratikshakatale7/demo-project:$CI_COMMIT_SHORT_SHA
+  CONTAINER_RELEASE_IMAGE: registry.gitlab.com/pratikshakatale7/demo-project:latest
+default:
+  tags:
+    - docker
+image: docker:latest
+services:
+  - docker:dind
+
+stages:
+  - build
+  - build-docker-image
+  - release
+
+ 
+cache:
+  paths:
+    - ./.m2/repository 
+    - target
+
+maven-build:
+  image: maven:3-jdk-8
+  stage: build
+  script: "mvn package -B"
+  artifacts:
+    paths:
+      - ./target/*.jar
+build-docker-image:
+  stage: build-docker-image
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD  registry.gitlab.com
+  script:
+    #- export VERSION=$(git rev-parse --short HEAD )
+    - docker build -t registry.gitlab.com/pratikshakatale7/demo-project:$CI_COMMIT_SHORT_SHA .
+    - docker push registry.gitlab.com/pratikshakatale7/demo-project:$CI_COMMIT_SHORT_SHA
+    - docker pull $CONTAINER_TEST_IMAGE
+    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
+    - docker push $CONTAINER_RELEASE_IMAGE
