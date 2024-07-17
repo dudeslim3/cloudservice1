@@ -16,10 +16,8 @@ public class demoservice1 {
 	}
 	
 	
-	@Bean
-	//@LoadBalanced
-	public RestTemplate restTemplate()
-	{
-		return new RestTemplate();
-	}
+	/*
+	 * @Bean //@LoadBalanced public RestTemplate restTemplate() { return new
+	 * RestTemplate(); }
+	 */
 }

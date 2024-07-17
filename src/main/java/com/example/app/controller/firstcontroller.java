@@ -23,21 +23,21 @@ import org.springframework.web.client.RestTemplate;
 public class firstcontroller
 {
 	
-	@Autowired
-	RestTemplate restTemplate;
+	/*
+	 * @Autowired RestTemplate restTemplate;
+	 */
 	
 
 	@GetMapping("/service-1")
 	public String getValues() {
 		return "Getting Called by Service 1";
 	}
-	
-	@GetMapping("/service-1-2")
-	public String getValueFromService2() {
-		String val = restTemplate.getForObject("http://demo-2-app:8080/service-2", String.class);
-		return "Service call from service 1 to service 2 --- " + val;
-	}
-	
+	/*
+	 * @GetMapping("/service-1-2") public String getValueFromService2() { String val
+	 * = restTemplate.getForObject("http://demo-2-app:8080/service-2",
+	 * String.class); return "Service call from service 1 to service 2 --- " + val;
+	 * }
+	 */
 	
 	
 
