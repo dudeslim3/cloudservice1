@@ -30,7 +30,7 @@ public class firstcontroller
 
 	@GetMapping("/service-1")
 	public String getValues() {
-		return "Getting Called by Service 1";
+		return "Getting Called by Service 1 for test purpose";
 	}
 	/*
 	 * @GetMapping("/service-1-2") public String getValueFromService2() { String val

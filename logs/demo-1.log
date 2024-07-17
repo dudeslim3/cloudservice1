@@ -68,3 +68,22 @@ Action:
 
 Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 
+2024-07-17 23:02:25.394  INFO [demo-1,,,] 12420 --- [  restartedMain] com.example.app.demoservice1             : Starting demoservice1 using Java 17 on DESKTOP-DQ3CT1D with PID 12420 (E:\PWC\jenkin_test\cloudservice1\target\classes started by Dell in E:\PWC\jenkin_test\cloudservice1)
+2024-07-17 23:02:25.398  INFO [demo-1,,,] 12420 --- [  restartedMain] com.example.app.demoservice1             : No active profile set, falling back to 1 default profile: "default"
+2024-07-17 23:02:25.474  INFO [demo-1,,,] 12420 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-17 23:02:25.475  INFO [demo-1,,,] 12420 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-17 23:02:26.840  INFO [demo-1,,,] 12420 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0c8be3b9-538f-3c34-ba50-849ec54a717f
+2024-07-17 23:02:28.042  INFO [demo-1,,,] 12420 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-07-17 23:02:28.055  INFO [demo-1,,,] 12420 --- [  restartedMain] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-17 23:02:28.056  INFO [demo-1,,,] 12420 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-17 23:02:28.057  INFO [demo-1,,,] 12420 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2024-07-17 23:02:28.173  INFO [demo-1,,,] 12420 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-17 23:02:28.173  INFO [demo-1,,,] 12420 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2697 ms
+2024-07-17 23:02:29.877  INFO [demo-1,,,] 12420 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-17 23:02:30.248  INFO [demo-1,,,] 12420 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-07-17 23:02:30.285  INFO [demo-1,,,] 12420 --- [  restartedMain] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8080"]
+2024-07-17 23:02:30.357  INFO [demo-1,,,] 12420 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-07-17 23:02:30.581  INFO [demo-1,,,] 12420 --- [  restartedMain] com.example.app.demoservice1             : Started demoservice1 in 5.902 seconds (JVM running for 6.735)
+2024-07-17 23:03:10.696  INFO [demo-1,711b941acbde9feb,711b941acbde9feb,] 12420 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-17 23:03:10.697  INFO [demo-1,711b941acbde9feb,711b941acbde9feb,] 12420 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-17 23:03:10.698  INFO [demo-1,711b941acbde9feb,711b941acbde9feb,] 12420 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
